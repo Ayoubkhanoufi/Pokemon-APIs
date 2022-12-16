@@ -1,5 +1,22 @@
 import '../styles/globals.css'
+import Head from 'next/head'
+import Layout from '../components/Layout'
+import 'antd/dist/reset.css';
 
-export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} />
+function MyApp({ Component, pageProps }) {
+
+  return (
+    <>
+      <Head>
+        <title>Pokemon</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </>
+  )
+
 }
+
+export default MyApp
